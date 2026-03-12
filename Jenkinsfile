@@ -33,8 +33,7 @@ stage('Clone Repository') {
         sudo npm run build 
         sudo fuser -k 3000/tcp || true
         npm run start 
-
-
+        
         """
     }
 }
