@@ -25,7 +25,7 @@ stage('Clone Repository') {
 
         sudo chown -R jenkins:jenkins ${appDir}
 
-        rsync -av --delete --exclude='.git' --exclude='node_modules' . / ${appDir}
+        rsync -av --delete --exclude='.git' --exclude='node_modules' ./ ${appDir}
 
         cd ${appDir}
 
