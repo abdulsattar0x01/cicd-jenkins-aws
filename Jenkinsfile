@@ -4,10 +4,10 @@ def appDir = '/var/www/nextjs-app'
 
 
 
-stage('Clean Workspace'){
+stage('Clean Workspace') {
 echo 'Cleaning workspace...'
 deleteDir()
-}
+} 
 
 stage('Clone Repository') {
     echo 'Cloning repository...'
@@ -16,7 +16,7 @@ stage('Clone Repository') {
         url: 'https://github.com/abdulsattar0x01/cicd-jenkins-aws.git',
         
     )
-
+}
 
     stage('Deploy to Ec2') {
         echo 'Deploying to EC2...'
@@ -34,7 +34,7 @@ stage('Clone Repository') {
         sudo fuser -k 3000/tcp || true
         npm run start 
 
-        
+
         """
     }
 }
