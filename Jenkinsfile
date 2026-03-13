@@ -31,9 +31,12 @@ stage('Clone Repository') {
 
         npm install 
         npm run build 
-        sudo fuser -k 3000/tcp || true
-        nohup npm run start -- -H 0.0.0.0 > app.log 2>&1 &
+    
 
+   # Start or restart app via PM2
+        pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
+        pm2 save
         """
+        
     }
 }
