@@ -27,7 +27,7 @@ stage('Clone Repository') {
         
         # Start app with flags passed to PM2
         cd ${appDir}
-        pm2 start npm --name "nextjs-app" -- run start -- -H 0.0.0.0 -p 3000
+        pm2 start npm --name "nextjs-app" -- start --watch --ignore-watch="node_modules" --env production
         pm2 save
         
         # Verify
@@ -35,7 +35,7 @@ stage('Clone Repository') {
         pm2 list
        
 
-       
+
         """
     }
 }
