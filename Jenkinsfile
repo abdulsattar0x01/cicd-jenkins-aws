@@ -34,8 +34,8 @@ stage('Clone Repository') {
     
 
    # Start or restart app via PM2
-        pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- run start
-        pm2 save
+        pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- run start -- -H 0.0.0.0 -p 3000
+    pm2 save
         """
         
     }
