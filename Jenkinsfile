@@ -32,7 +32,7 @@ stage('Clone Repository') {
         npm install 
         npm run build 
         sudo fuser -k 3000/tcp || true
-        npm run start 
+        nohup npm run start > app.log 2>&1 &
 
         """
     }
