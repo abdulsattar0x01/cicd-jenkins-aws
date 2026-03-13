@@ -22,12 +22,12 @@ stage('Clone Repository') {
         npm run build 
         
         # Kill old PM2 app
-        pm2 delete nextjs-app 2>/dev/null || true
+       sudo pm2 delete nextjs-app 2>/dev/null || true
         sleep 2
         
         # Start app with flags passed to PM2
         cd ${appDir}
-       pm2 start npm --name "nextjs-app" -- start -- -H 0.0.0.0 -p 3000
+        sudo pm2 start npm --name "nextjs-app" -- start -- -H 0.0.0.0 -p 3000
         pm2 save
         
         # Verify
