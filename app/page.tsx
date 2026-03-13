@@ -17,7 +17,7 @@ export default function Home() {
             Welcome to our app {" "}   Next.js App CI CD AWS!
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          cid code  ls ls aaaaa starting point  to app{" "}
+          cid code  ls ls a starting point  to app{" "}
 
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
